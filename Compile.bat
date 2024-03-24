@@ -41,6 +41,7 @@
 @IF EXIST *.exe @DEL *.exe
 
 :: Compile all .c files into .obj
+@CALL "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
 @CL /MD /O2 /c /DLUA_BUILD_AS_DLL *.c
 
 :: Rename two special files
